@@ -1,0 +1,66 @@
+.header__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 19px;
+}
+
+.header__nav {
+}
+.nav-list {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 2px 6px 0px;
+}
+.nav-item{
+    padding-right: 40px;
+    .nav-item {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  padding-bottom: 5px; /* Высота полоски при отсутствии наведения */
+
+  &:hover {
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background-color: #000; /* Цвет полоски */
+      transition: width 0.3s ease; /* Плавное изменение ширины */
+    }
+
+    &:before {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &:after {
+      right: 50%;
+      transform: translateX(50%);
+    }
+  }
+}
+}
+.nav-list li:last-child{
+    padding-right: 0;
+}
+
+.nav-item a{
+    font-weight: 600;
+    line-height: 150%;
+    font-style: normal;
+    color:$color-text-dark
+
+}
+.header-menu__link {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    padding-bottom: 6px;
+    color: #403F3D;
+}
+.header-menu__link svg{
+    padding-left: 7px;
+}

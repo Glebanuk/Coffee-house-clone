@@ -1,0 +1,104 @@
+@charset "UTF-8";
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: #E1D4C9;
+  font-size: 1.6rem;
+  font-family: "Inter", sans-serif;
+}
+
+h1 {
+  font-size: 72px;
+  font-weight: 600;
+  line-height: 105%;
+}
+
+h2 {
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 125%;
+  color: #403F3D;
+}
+
+h3 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%;
+}
+
+.footer {
+  background: #665F55;
+}
+
+.wrapper {
+  max-width: 1360px;
+  margin: auto;
+}
+
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 19px;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 2px 6px 0px;
+}
+
+.nav-item {
+  padding-right: 40px;
+}
+.nav-item .nav-item {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  padding-bottom: 5px; /* Высота полоски при отсутствии наведения */
+}
+.nav-item .nav-item:hover:before, .nav-item .nav-item:hover:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #000; /* Цвет полоски */
+  transition: width 0.3s ease; /* Плавное изменение ширины */
+}
+.nav-item .nav-item:hover:before {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.nav-item .nav-item:hover:after {
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.nav-list li:last-child {
+  padding-right: 0;
+}
+
+.nav-item a {
+  font-weight: 600;
+  line-height: 150%;
+  font-style: normal;
+  color: #403F3D;
+}
+
+.header-menu__link {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  padding-bottom: 6px;
+  color: #403F3D;
+}
+
+.header-menu__link svg {
+  padding-left: 7px;
+}
+
+/*# sourceMappingURL=style.css.map */
