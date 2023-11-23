@@ -1,4 +1,3 @@
-@charset "UTF-8";
 html {
   font-size: 10px;
 }
@@ -54,29 +53,6 @@ h3 {
 .nav-item {
   padding-right: 40px;
 }
-.nav-item .nav-item {
-  position: relative;
-  display: inline-block;
-  text-decoration: none;
-  padding-bottom: 5px; /* Высота полоски при отсутствии наведения */
-}
-.nav-item .nav-item:hover:before, .nav-item .nav-item:hover:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: 0;
-  height: 2px;
-  background-color: #000; /* Цвет полоски */
-  transition: width 0.3s ease; /* Плавное изменение ширины */
-}
-.nav-item .nav-item:hover:before {
-  left: 50%;
-  transform: translateX(-50%);
-}
-.nav-item .nav-item:hover:after {
-  right: 50%;
-  transform: translateX(50%);
-}
 
 .nav-list li:last-child {
   padding-right: 0;
@@ -87,6 +63,27 @@ h3 {
   line-height: 150%;
   font-style: normal;
   color: #403F3D;
+  cursor: pointer;
+  position: relative;
+  cursor: pointer;
+  position: relative;
+}
+.nav-item a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -10px;
+  height: 3px;
+  transition: 0.3s;
+}
+.nav-item a:hover::after {
+  width: 100%;
+}
+
+.nav-item a::after {
+  background-color: #403F3D;
 }
 
 .header-menu__link {
@@ -95,6 +92,24 @@ h3 {
   align-items: center;
   padding-bottom: 6px;
   color: #403F3D;
+  cursor: pointer;
+  position: relative;
+}
+.header-menu__link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -10px;
+  height: 3px;
+  transition: 0.3s;
+}
+.header-menu__link:hover::after {
+  width: 100%;
+}
+.header-menu__link:after {
+  background-color: #403F3D;
 }
 
 .header-menu__link svg {
