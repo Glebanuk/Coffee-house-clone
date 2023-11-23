@@ -5,12 +5,11 @@
     padding-top: 19px;
 }
 
-.header__nav {
-}
+
 .nav-list {
     display: flex;
     justify-content: space-between;
-    padding: 0px 2px 6px 0px;
+    padding: 0px 0px 6px 0px;
 }
 .nav-item{
     padding-right: 40px;
@@ -27,6 +26,7 @@
     color:$color-text-dark;
     cursor:pointer;
     position: relative;
+    
     @include link-decoration;
   }
   .nav-item a::after{
@@ -48,5 +48,5 @@
 
 
 .header-menu__link svg{
-    padding-left: 7px;
+  margin-left: 8px;
 }
