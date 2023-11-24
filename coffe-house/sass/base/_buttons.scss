@@ -27,3 +27,11 @@
     opacity: 1;
 }
 
+// ---------circle buttons------------------------
+
+.circle-btn{
+    border-radius: 100px;
+    border: 1px solid $color-hover-btn;
+    background:transparent;
+    padding: 15px;
+}
