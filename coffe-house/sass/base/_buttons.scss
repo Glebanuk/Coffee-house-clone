@@ -1,0 +1,37 @@
+.enjoy-btn{
+    border-radius: 100px;
+    padding: 20px 78px;
+    color:$color-text-dark;
+    background-color: $color-text-light;
+    border: none;
+    position: relative;
+
+}
+.enjoy-btn:hover span{
+    transform: translateX(-20px);
+}
+.enjoy-btn span{
+    transition: 0.3s ease;
+}
+.enjoy-btn svg{
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-100%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease, left 0.3s ease;
+
+}
+.enjoy-btn:hover svg {
+    left: 0;
+    opacity: 1;
+}
+
+// ---------circle buttons------------------------
+
+.circle-btn{
+    border-radius: 100px;
+    border: 1px solid $color-hover-btn;
+    background:transparent;
+    padding: 15px;
+}

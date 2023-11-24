@@ -1,0 +1,20 @@
+@mixin link-decoration() {
+    cursor: pointer;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+    //   background-color: $color-text-dark;
+      width: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -10px;
+      height: 3px;
+      transition: 0.3s;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
