@@ -1,6 +1,40 @@
 .cozy-place h2{
     font-size: 60px;
-font-style: italic;
 font-weight: 600;
 line-height: 125%;
+margin-bottom: 36px;
+}
+.cozy-place__grid-container{
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.cozy__column{
+    display: flex;
+    flex-direction: column;
+    width: 660px;
+    gap: 40px;
+}
+
+.img__box{  
+    border-radius: 20px;   
+}
+.img__box img{
+    width: 100%;;
+    border-radius: 20px;
+    object-fit: cover;
+    height: 100%;
+}
+.img__box1{
+    height: 585px;
+}
+.img__box2{
+    height: 430px;
+}
+.img__box3{
+    height: 430px;
+}
+.img__box4{
+    height: 585px;
 }
