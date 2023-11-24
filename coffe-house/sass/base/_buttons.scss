@@ -35,3 +35,60 @@
     background:transparent;
     padding: 15px;
 }
+
+// -----dawnload btn-----
+
+.download-btn{
+    display: inline-flex;
+    border-radius: 100px;
+    border: 1px solid $color-text-dark;
+    background: transparent;
+    margin-right: 15px;
+    transition: 0.3s;
+
+    &:hover{
+        background-color:$color-hover-btn;
+    }
+}
+
+.btn-text__container{
+    display: inline-block;
+    text-align: start;
+    width: 100px;
+    margin-left: 12px;
+    margin-right: 17px;
+}
+.apple-btn-text__container{
+    display: inline-block;
+    text-align: start;
+    width: 100px;
+    margin: 8px 29px 9px 8px;
+}
+.google-play-btn-text__container{
+    display: inline-block;
+    text-align: start;
+    width: 100px;
+    margin: 8px 29px 9px 8px;
+}
+.btn-text span:first-child{
+    font-size: 10px;
+font-style: normal;
+font-weight: 600;
+line-height: 140%;
+color:$color-text-dark;
+}
+.btn-text span:last-child{
+    font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 150%;
+color:$color-text-dark;
+}
+.apple-btn__link{
+    padding-left: 13px;
+    padding-top: 11px;
+}
+.google-play-btn__link{
+    padding-left: 13px;
+    padding-top: 11px;
+}

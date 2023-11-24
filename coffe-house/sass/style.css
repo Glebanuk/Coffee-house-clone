@@ -72,6 +72,66 @@ h3 {
   padding: 15px;
 }
 
+.download-btn {
+  display: inline-flex;
+  border-radius: 100px;
+  border: 1px solid #403F3D;
+  background: transparent;
+  margin-right: 15px;
+  transition: 0.3s;
+}
+.download-btn:hover {
+  background-color: #665F55;
+}
+
+.btn-text__container {
+  display: inline-block;
+  text-align: start;
+  width: 100px;
+  margin-left: 12px;
+  margin-right: 17px;
+}
+
+.apple-btn-text__container {
+  display: inline-block;
+  text-align: start;
+  width: 100px;
+  margin: 8px 29px 9px 8px;
+}
+
+.google-play-btn-text__container {
+  display: inline-block;
+  text-align: start;
+  width: 100px;
+  margin: 8px 29px 9px 8px;
+}
+
+.btn-text span:first-child {
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  color: #403F3D;
+}
+
+.btn-text span:last-child {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  color: #403F3D;
+}
+
+.apple-btn__link {
+  padding-left: 13px;
+  padding-top: 11px;
+}
+
+.google-play-btn__link {
+  padding-left: 13px;
+  padding-top: 11px;
+}
+
 .footer {
   background: #665F55;
 }
@@ -275,6 +335,10 @@ h3 {
   margin-bottom: 33px;
 }
 
+.cozy-place {
+  padding-bottom: 104px;
+}
+
 .cozy-place h2 {
   font-size: 60px;
   font-weight: 600;
@@ -296,6 +360,8 @@ h3 {
 }
 
 .img__box {
+  cursor: pointer;
+  overflow: hidden;
   border-radius: 20px;
 }
 
@@ -304,6 +370,11 @@ h3 {
   border-radius: 20px;
   object-fit: cover;
   height: 100%;
+  transition: 0.6s;
+  transform: scale(1.1);
+}
+.img__box img:hover {
+  scale: 1;
 }
 
 .img__box1 {
@@ -320,6 +391,25 @@ h3 {
 
 .img__box4 {
   height: 585px;
+}
+
+.download__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.download-content {
+  padding-top: 98px;
+  width: 46%;
+}
+
+.download-content h2 {
+  margin-bottom: 40px;
+}
+
+.download-content p {
+  line-height: 150%;
+  margin-bottom: 37px;
 }
 
 /*# sourceMappingURL=style.css.map */

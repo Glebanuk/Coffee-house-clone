@@ -1,3 +1,6 @@
+.cozy-place{
+    padding-bottom: 104px;
+}
 .cozy-place h2{
     font-size: 60px;
 font-weight: 600;
@@ -16,15 +19,22 @@ margin-bottom: 36px;
     width: 660px;
     gap: 40px;
 }
-
-.img__box{  
-    border-radius: 20px;   
+.img__box{
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 20px;
 }
 .img__box img{
     width: 100%;;
     border-radius: 20px;
     object-fit: cover;
     height: 100%;
+    transition: 0.6s;
+    transform: scale(1.1);
+
+    &:hover{
+        scale: 1;
+    }
 }
 .img__box1{
     height: 585px;
