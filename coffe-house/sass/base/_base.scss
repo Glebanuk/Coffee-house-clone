@@ -1,11 +1,15 @@
+// @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Manrope:wght@400;700&display=swap');
+
 html{
     font-size: 10px;
+    scroll-behavior: smooth;
     }
     
     body{
         background-color: #E1D4C9;
         font-size: 1.6rem;
         font-family: 'Inter', sans-serif; 
+        
     }
     h1{
         // color: $color-text-light;
@@ -18,6 +22,7 @@ html{
       font-weight: 600;
       line-height: 125%;
       color: $color-text-dark;
+      font-style: normal;
       }
       
       h3{

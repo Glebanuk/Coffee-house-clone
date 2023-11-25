@@ -34,4 +34,122 @@
     border: 1px solid $color-hover-btn;
     background:transparent;
     padding: 15px;
+    transition: background-color 0.3s;
+}
+
+// -----slider butttons arrows-----
+.slider__btn-right{
+    margin-right: 5px
+}
+.slider__btn-left{
+    margin-left: 5px
+}
+.slider__btn{
+    &:hover {
+        background-color: $color-hover-btn; 
+
+        svg path {
+            stroke: $color-text-light; 
+        }
+    }
+}
+// -----dawnload btn-----
+
+.download-btn{
+    border-radius: 100px;
+    border: 1px solid #403F3D;
+    background: transparent;
+    margin-right: 15px;
+    transition: 0.3s;
+
+    &:hover{
+        background-color:$color-hover-btn;
+    }
+}
+
+.btn-text__container{
+    display: inline-block;
+    text-align: start;
+    width: 100px;
+    margin-left: 12px;
+    margin-right: 17px;
+}
+.apple-btn-text__container{
+    display: inline-block;
+    text-align: start;
+    width: 100px;
+    margin: 8px 25px 5px 8px;
+}
+.google-play-btn-text__container{
+    display: inline-block;
+    text-align: start;
+    width: 100px;
+    margin: 4px 26px 5px 8px;
+}
+.btn-text span:first-child{
+    font-size: 10px;
+font-style: normal;
+font-weight: 600;
+line-height: 140%;
+color:$color-text-dark;
+}
+.btn-text span:last-child{
+    font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 150%;
+color:$color-text-dark;
+}
+.apple-btn__link{
+    margin-left: 13px;
+    margin-top: 11px;
+}
+.google-play-btn__link{
+    margin-left: 13px;
+    margin-top: 11px;
+}
+// ----------media BTN--------
+.media-buttons{
+    display: flex;
+    justify-content: start;
+    gap: 12px;
+}
+.media__btn{
+    border: 1px solid $color-border-light;
+    
+    &:hover {
+        background-color: $color-text-light; 
+
+        svg path {
+            stroke: $color-text-dark; 
+        }
+    }
+
+}
+.media__btn svg{
+    stroke: $color-border-light;
+}
+
+// --------------------menu btns------------------
+
+.category__btns button{
+    border-radius: 100px;
+    display: inline-flex;
+    align-items:center;
+    border:none;
+    color: $color-text-dark;
+    gap:8px;
+    font-style: normal;
+font-weight: 600;
+line-height: 150%;
+padding: 8px 16px 8px 8px;
+}
+.category__btns button:focus,
+.category__btns button.active {
+    background-color: $color-hover-btn;
+    color:$color-text-light;
+    
+    svg{
+        fill: transparent;
+    }
 }
