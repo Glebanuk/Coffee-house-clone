@@ -36,6 +36,13 @@
     padding: 15px;
 }
 
+// -----slider butttons arrows-----
+.slider__btn-right{
+    margin-right: 5px
+}
+.slider__btn-left{
+    margin-left: 5px
+}
 // -----dawnload btn-----
 
 .download-btn{
@@ -91,4 +98,16 @@ color:$color-text-dark;
 .google-play-btn__link{
     padding-left: 13px;
     padding-top: 11px;
+}
+// ----------media BTN--------
+.media-buttons{
+    display: flex;
+    justify-content: start;
+    gap: 12px;
+}
+.media__btn{
+    border: 1px solid $color-border-light;
+}
+.media__btn svg{
+    stroke: $color-border-light;
 }
