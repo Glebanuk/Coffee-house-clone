@@ -59,8 +59,19 @@ opacity: 0;
             stroke: $color-text-light; 
         }
     }
+
+    @include mobile{
+        display: none;
+    }
 }
 // -----dawnload btn-----
+.download-btn__container{
+    @include mobile {
+        display: inline-flex;
+        flex-direction: column;
+        gap: 26px;
+    }
+}
 
 .download-btn{
     border-radius: 100px;

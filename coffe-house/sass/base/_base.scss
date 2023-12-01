@@ -11,19 +11,31 @@ html{
         font-family: 'Inter', sans-serif; 
         margin: 0 40px;
         
+        @include mobile{
+          margin: 0 16px;
+        }
+        
     }
     h1{
         // color: $color-text-light;
         font-size: 72px;
         font-weight: 600;
         line-height: 105%;
+        @include mobile{
+          font-size: 42px;
+          line-height: 115%;
+        }
       }
       h2{
-      font-size: 60px;
+        font-size: 60px;
       font-weight: 600;
       line-height: 125%;
       color: $color-text-dark;
       font-style: normal;
+      
+      @include mobile{
+        font-size: 32px;
+      }
       }
       
       h3{

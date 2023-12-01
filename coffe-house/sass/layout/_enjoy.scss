@@ -3,6 +3,9 @@
     @include tablet{
         padding-bottom: 50px;
     }
+    @include mobile{
+        padding-bottom: 74px;
+    }
 }
 .enjoy-wrapper{
     border-radius: 40px;
@@ -17,7 +20,11 @@
         padding-left: 58px;
         padding-bottom: 103px;
     }
-
+    @include mobile{
+        padding-top: 60px;
+    padding-left: 16px;
+    padding-bottom: 59px;
+    }
 }
 .enjoy-content__container{
     display: flex;
@@ -31,12 +38,18 @@
     @include tablet{
         margin-bottom: 43px;
     }
+    @include mobile{
+        margin-bottom: 40px;
+    }
 }
 .enjoy-content__container p{
     color:$color-text-light;
     font-weight: 400;
     margin-bottom: 40px;
     line-height: 150%;
+    @include mobile{
+        width: 326px
+    }
     
 }
 

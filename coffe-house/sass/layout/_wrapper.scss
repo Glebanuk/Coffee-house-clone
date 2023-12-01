@@ -1,10 +1,13 @@
 .wrapper{
     max-width: $content-width;
     margin: auto;
-    // border: 1px solid red;
 
     @include tablet{
         max-width: $tablet-width;
         
+    }
+    @include mobile{
+        max-width:$mob-width;
+
     }
 }

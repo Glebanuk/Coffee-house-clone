@@ -21,6 +21,10 @@
 .slider-item img{
     width: 480px;
     height: 480px;
+    @include mobile{
+        width: 350px;
+        height: 350px;
+    }
 }
 
 .slider-item *{
@@ -32,6 +36,9 @@
     @include tablet{
         margin-bottom: 17px;
         margin-top: 28px;
+    }
+    @include mobile{
+        margin-top: 24px;
     }
 }
 .slider-item p{

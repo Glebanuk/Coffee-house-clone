@@ -3,11 +3,12 @@
     @include tablet{
         padding-bottom: 56px;
     }
+    @include mobile{
+        padding-bottom: 77px;
+    }
+
 }
 .cozy-place h2{
-    font-size: 60px;
-font-weight: 600;
-line-height: 125%;
 margin-bottom: 36px;
 }
 .cozy-place__grid-container{

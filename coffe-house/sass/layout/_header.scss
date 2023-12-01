@@ -19,6 +19,12 @@
     border-radius: 100px;
     background: #665F55;
 
+    @include mobile{
+      top: 56%;
+      left: 32%;
+      width: 17px;
+    }
+
   }
   &::before{
     content: "";
@@ -29,6 +35,12 @@
     height: 2px;
     border-radius: 100px;
     background: #665F55;
+
+    @include mobile{
+    top: 37%;
+    left: 32%;
+    width: 17px
+  }
 
   }
 
