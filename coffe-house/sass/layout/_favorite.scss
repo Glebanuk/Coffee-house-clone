@@ -1,5 +1,8 @@
 .favorite{
     padding-bottom: 54px;
+    @include tablet{
+        padding-bottom: 47px;
+    }
 }
 .favorite h2{
     text-align: center;

@@ -3,7 +3,6 @@
     line-height: 150%;
     font-style: normal;
     color: $color-text-dark;
-    cursor: pointer;
     position: relative;
 
     &::after {
@@ -16,6 +15,9 @@
         bottom: 0px;
         height: 3px;
         transition: 0.3s;
+    }
+    @include tablet{
+        display: none;
     }
 }
 .menu-page-link svg{
@@ -32,13 +34,39 @@
     justify-content: center;
     gap: 16px;
 }
+.menu-container{
+    margin-bottom: 96px;
+
+    @include tablet {
+    margin-bottom: 99px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+}
 .menu-items__list{
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
     margin-top: 40px;
     row-gap: 42px;
-    margin-bottom: 96px;
+    
+
+    @include tablet{
+    justify-content: center;
+    row-gap: 45px;
+    margin-bottom: 40px;
+    }
+}
+.menu-items__list li:nth-child(5),
+.menu-items__list li:nth-child(6),
+.menu-items__list li:nth-child(7),
+.menu-items__list li:nth-child(8){
+    @include tablet{
+        display: none;
+    }
+    
+
 }
 .menu-items__list li{
     max-width: 310px;
@@ -85,4 +113,5 @@
     margin-left: 20px;
     
 }
+
 

@@ -5,10 +5,24 @@
 
     display: flex;
     justify-content: space-between;
+    @include tablet{
+       flex-direction: column;
+       align-items: center;
+            }
 }
+// .download-img{
+//     @include tablet{
+//         display: none;
+//     }
+// }
 .download-content{
     padding-top: 98px;
     width: 46%;
+    @include tablet{
+        padding-top: 0px;
+        width: 100%;
+        padding-bottom: 109px;
+            }
 }
 .download-content h2{
     margin-bottom: 40px
