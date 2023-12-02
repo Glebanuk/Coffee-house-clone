@@ -1,6 +1,50 @@
 .header{
   padding-bottom: 18px;
 }
+.burger{
+  display: none;
+  position: relative;
+  @include tablet{
+    display: inline;
+    width: 44px;
+    height: 44px;
+  }
+  &::after{
+    content: "";
+    position: absolute;
+    top: 52%;
+    left: 34%;
+    width: 16px;
+    height: 2px;
+    border-radius: 100px;
+    background: #665F55;
+
+    @include mobile{
+      top: 56%;
+      left: 32%;
+      width: 17px;
+    }
+
+  }
+  &::before{
+    content: "";
+    position: absolute;
+    top: 33%;
+    left: 34%;
+    width: 16px;
+    height: 2px;
+    border-radius: 100px;
+    background: #665F55;
+
+    @include mobile{
+    top: 37%;
+    left: 32%;
+    width: 17px
+  }
+
+  }
+
+}
 .h1__menu-page{
   display: none;
 }
@@ -10,7 +54,11 @@
     justify-content: space-between;
     padding-top: 19px;
 }
-
+.header__nav{
+  @include tablet{
+    display: none;
+  }
+}
 
 .nav-list {
     display: flex;
@@ -48,6 +96,10 @@
 
     &:after{
       background-color:$color-text-dark;
+    }
+
+    @include tablet{
+      display: none;
     }
 }
 

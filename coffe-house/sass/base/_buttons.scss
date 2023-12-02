@@ -1,31 +1,4 @@
-// .enjoy-btn{
-//     border-radius: 100px;
-//     padding: 20px 78px;
-//     color:$color-text-dark;
-//     background-color: $color-text-light;
-//     border: none;
-//     position: relative;
 
-// }
-// .enjoy-btn:hover span{
-//     transform: translateX(-20px);
-// }
-// .enjoy-btn span{
-//     transition: 0.3s ease;
-// }
-// .enjoy-btn svg{
-//     position: absolute;
-//     top: 50%;
-//     left: 100%;
-//     transform: translate(-100%, -50%);
-//     opacity: 0;
-//     transition: opacity 0.3s ease, left 0.3s ease;
-
-// }
-// .enjoy-btn:hover svg {
-//     left: 0;
-//     opacity: 1;
-// }
 .enjoy-btn{
 display: inline-flex;
 align-items: center;
@@ -41,11 +14,19 @@ position: absolute;
 transition: 0.3s ease;
 left: 80px;
 top: 37%;
+
+@include tablet{
+    left: 65px;
+    }
 }
 .enjoy-btn svg{
 position: absolute;
 transition: 0.4s ease;
 opacity: 0;
+@include tablet{
+    opacity: 1;
+    right: 63px;
+    }
 }
 .enjoy-btn:hover span{
     left: 55px;
@@ -78,8 +59,19 @@ opacity: 0;
             stroke: $color-text-light; 
         }
     }
+
+    @include mobile{
+        display: none;
+    }
 }
 // -----dawnload btn-----
+.download-btn__container{
+    @include mobile {
+        display: inline-flex;
+        flex-direction: column;
+        gap: 26px;
+    }
+}
 
 .download-btn{
     border-radius: 100px;
@@ -150,6 +142,9 @@ color:$color-text-dark;
     display: flex;
     justify-content: start;
     gap: 12px;
+    @include tablet{
+        gap: 17px;
+    }
 }
 .media__btn{
     border: 1px solid $color-border-light;
@@ -168,7 +163,16 @@ color:$color-text-dark;
 }
 
 // --------------------menu btns------------------
+.category__btns{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
 
+    @include mobile{
+        gap: 3px;
+        justify-content: space-between;
+    }
+}
 .category__btns button{
     border-radius: 100px;
     display: inline-flex;
@@ -180,6 +184,19 @@ color:$color-text-dark;
 font-weight: 600;
 line-height: 150%;
 padding: 8px 16px 8px 8px;
+
+@include mobile{
+    padding: 10px 16px 8px 8px;
+    gap: 0;
+}
+
+}
+.category__btns button svg{
+    margin-right: 4px;
+    
+@include mobile{
+    margin-right: 9px;
+    }
 }
 .category__btns button:focus,
 .category__btns button.active {
@@ -188,5 +205,20 @@ padding: 8px 16px 8px 8px;
     
     svg{
         fill: transparent;
+    }
+}
+
+.menu__refresh-btn{
+    display: none;
+
+    @include tablet{
+        display: inline-block;
+        &:hover {
+            background-color: $color-hover-btn; 
+    
+            svg path {
+                stroke: $color-text-light; 
+            }
+        }
     }
 }
