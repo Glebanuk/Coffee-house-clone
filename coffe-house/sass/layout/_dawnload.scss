@@ -5,10 +5,24 @@
 
     display: flex;
     justify-content: space-between;
+    @include tablet{
+       flex-direction: column;
+       align-items: center;
+            }
 }
+
 .download-content{
     padding-top: 98px;
     width: 46%;
+    @include tablet{
+        padding-top: 0px;
+        width: 100%;
+        padding-bottom: 109px;
+    }
+
+    @include mobile{
+        padding-bottom: 42px;
+    }
 }
 .download-content h2{
     margin-bottom: 40px
@@ -17,3 +31,9 @@
     line-height: 150%;
     margin-bottom: 37px;
 }
+.download-img img{
+    @include mobile{
+        width: 100%;
+    }
+}
+

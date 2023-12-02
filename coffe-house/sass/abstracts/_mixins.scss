@@ -18,3 +18,12 @@
       width: 100%;
     }
   }
+
+  @mixin tablet {
+
+    @media (max-width: $tablet-width) { @content; }
+  }
+  @mixin mobile {
+
+    @media (max-width: $mob-width) { @content; }
+  }
