@@ -587,20 +587,27 @@ h3 {
 .header__wrapper {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding-top: 19px;
 }
 
+.logo {
+  margin-right: 27%;
+}
+
+.header__nav {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 66%;
+}
 @media (max-width: 768px) {
   .header__nav {
-    display: none;
+    background: #E1D4C9;
   }
 }
 
 .nav-list {
   display: flex;
-  justify-content: space-between;
-  padding: 0px 0px 6px 0px;
 }
 
 .nav-item {
@@ -641,10 +648,10 @@ h3 {
 
 .header-menu__link {
   font-weight: 600;
-  display: flex;
-  align-items: center;
-  padding-bottom: 6px;
+  display: inline-flex;
+  align-items: baseline;
   color: #403F3D;
+  cursor: pointer;
   cursor: pointer;
   position: relative;
 }
