@@ -1,50 +1,106 @@
 .header{
   padding-bottom: 18px;
 }
-.burger{
+// .burger{
+//   display: none;
+//   position: relative;
+
+//   @include tablet{
+//     display: inline;
+//     width: 44px;
+//     height: 44px;
+//   }
+//   &::after{
+//     content: "";
+//     position: absolute;
+//     top: 52%;
+//     left: 34%;
+//     width: 16px;
+//     height: 2px;
+//     border-radius: 100px;
+//     background: #665F55;
+
+//     @include mobile{
+//       top: 56%;
+//       left: 32%;
+//       width: 17px;
+//     }
+
+//   }
+//   &::before{
+//     content: "";
+//     position: absolute;
+//     top: 33%;
+//     left: 34%;
+//     width: 16px;
+//     height: 2px;
+//     border-radius: 100px;
+//     background: #665F55;
+
+//     @include mobile{
+//     top: 37%;
+//     left: 32%;
+//     width: 17px
+//   }
+
+//   }
+
+// }
+.burger {
   display: none;
   position: relative;
-  @include tablet{
+
+  @include tablet {
     display: inline;
     width: 44px;
     height: 44px;
   }
-  &::after{
+
+  &::after,
+  &::before {
     content: "";
     position: absolute;
-    top: 52%;
-    left: 34%;
-    width: 16px;
+    width: 17px;
     height: 2px;
     border-radius: 100px;
     background: #665F55;
+    transition: transform 0.3s ease; 
+  }
 
-    @include mobile{
+  &::after {
+    top: 52%;
+    left: 34%;
+
+    @include mobile {
       top: 56%;
       left: 32%;
       width: 17px;
     }
-
   }
-  &::before{
-    content: "";
-    position: absolute;
+
+  &::before {
     top: 33%;
     left: 34%;
-    width: 16px;
-    height: 2px;
-    border-radius: 100px;
-    background: #665F55;
 
-    @include mobile{
-    top: 37%;
-    left: 32%;
-    width: 17px
+    @include mobile {
+      top: 37%;
+      left: 32%;
+      width: 17px;
+    }
   }
 
-  }
+  /* Анимация для превращения в крест */
+  &.cross {
+    &::after {
+      transform: rotate(-45deg) translateY(-2px) translateX(1px);
+    }
 
+    &::before {
+      transform: rotate(45deg) translateY(4px) translateX(4px);
+    }
+  }
 }
+
 .h1__menu-page{
   display: none;
 }

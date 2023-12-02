@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   font-size: 10px;
   scroll-behavior: smooth;
@@ -532,6 +533,7 @@ h3 {
 .burger {
   display: none;
   position: relative;
+  /* Анимация для превращения в крест */
 }
 @media (max-width: 768px) {
   .burger {
@@ -540,15 +542,18 @@ h3 {
     height: 44px;
   }
 }
-.burger::after {
+.burger::after, .burger::before {
   content: "";
   position: absolute;
-  top: 52%;
-  left: 34%;
-  width: 16px;
+  width: 17px;
   height: 2px;
   border-radius: 100px;
   background: #665F55;
+  transition: transform 0.3s ease;
+}
+.burger::after {
+  top: 52%;
+  left: 34%;
 }
 @media (max-width: 380px) {
   .burger::after {
@@ -558,14 +563,8 @@ h3 {
   }
 }
 .burger::before {
-  content: "";
-  position: absolute;
   top: 33%;
   left: 34%;
-  width: 16px;
-  height: 2px;
-  border-radius: 100px;
-  background: #665F55;
 }
 @media (max-width: 380px) {
   .burger::before {
@@ -573,6 +572,12 @@ h3 {
     left: 32%;
     width: 17px;
   }
+}
+.burger.cross::after {
+  transform: rotate(-45deg) translateY(-2px) translateX(1px);
+}
+.burger.cross::before {
+  transform: rotate(45deg) translateY(4px) translateX(4px);
 }
 
 .h1__menu-page {
