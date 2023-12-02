@@ -29,11 +29,7 @@
     text-align: center;
     margin-bottom: 38px;
 }
-.category__btns{
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-}
+
 .menu-container{
     margin-bottom: 96px;
 
@@ -56,6 +52,10 @@
     justify-content: center;
     row-gap: 45px;
     margin-bottom: 40px;
+    }
+
+    @include mobile{
+        row-gap: 41px;
     }
 }
 .menu-items__list li:nth-child(5),

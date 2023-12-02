@@ -163,7 +163,16 @@ color:$color-text-dark;
 }
 
 // --------------------menu btns------------------
+.category__btns{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
 
+    @include mobile{
+        gap: 3px;
+        justify-content: space-between;
+    }
+}
 .category__btns button{
     border-radius: 100px;
     display: inline-flex;
@@ -175,6 +184,19 @@ color:$color-text-dark;
 font-weight: 600;
 line-height: 150%;
 padding: 8px 16px 8px 8px;
+
+@include mobile{
+    padding: 10px 16px 8px 8px;
+    gap: 0;
+}
+
+}
+.category__btns button svg{
+    margin-right: 4px;
+    
+@include mobile{
+    margin-right: 9px;
+    }
 }
 .category__btns button:focus,
 .category__btns button.active {
