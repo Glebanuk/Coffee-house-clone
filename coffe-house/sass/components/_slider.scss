@@ -6,12 +6,15 @@
 }
 .slider-wrapper{
     display: flex;
-    position: relative;
-    //  left: 500px;
+    overflow: hidden;
+    max-width: 480px;
 }
 .slider{
     display: flex;
     justify-content: center;
+    position: relative;
+    right: 0;
+    transition: 0.3s ease;
 }
 .slider-item{
     display: flex;
@@ -54,10 +57,7 @@
     line-height: 125%;
 }
 
-.slider-item:nth-child(2),
-.slider-item:nth-child(3){
-    display: none;
-}
+
 
 .slider-indicators{
     display: flex;

@@ -430,12 +430,16 @@ h3 {
 
 .slider-wrapper {
   display: flex;
-  position: relative;
+  overflow: hidden;
+  max-width: 480px;
 }
 
 .slider {
   display: flex;
   justify-content: center;
+  position: relative;
+  right: 0;
+  transition: 0.3s ease;
 }
 
 .slider-item {
@@ -487,11 +491,6 @@ h3 {
   font-style: normal;
   font-weight: 600;
   line-height: 125%;
-}
-
-.slider-item:nth-child(2),
-.slider-item:nth-child(3) {
-  display: none;
 }
 
 .slider-indicators {
@@ -734,7 +733,7 @@ h3 {
 }
 
 .enjoy {
-  padding-bottom: 55px;
+  padding-bottom: 50px;
 }
 @media (max-width: 768px) {
   .enjoy {
