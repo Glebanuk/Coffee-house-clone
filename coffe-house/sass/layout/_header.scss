@@ -5,6 +5,7 @@
 .burger {
   display: none;
   position: relative;
+  z-index: 2;
 
   @include tablet {
     display: inline;
@@ -64,9 +65,14 @@
   display: flex;
   align-items: center;
   padding-top: 19px;
+
+  @include tablet{
+    justify-content: space-between;
+  }
 }
 .logo{
   margin-right: 27%;
+  z-index: 2;
 }
 
 .header__nav{
@@ -74,17 +80,44 @@
     align-items: baseline;
     justify-content: space-between;
     width: 66%;
+
   @include tablet{
+    position: fixed;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: end;
     background: $color-text-light;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(100%);
+    transition: 0.3s ease;
   }
+}
+.header__nav-active{
+  transform: translateX(0);
 }
 
 .nav-list {
     display: flex;
+
+    @include tablet{
+      flex-direction: column;
+      text-align: center;
+      padding-bottom: 76px
+    }
     
 }
 .nav-item{
     padding-right: 40px;
+
+    @include tablet{
+      padding-right: 0px;
+      padding-top: 52px;
+    }
   }
 
 .nav-list li:last-child{
@@ -98,9 +131,15 @@
     color:$color-text-dark;
     cursor:pointer;
     position: relative;
-    
+
     @include link-decoration;
+
+    @include tablet{
+      line-height: 150%;
+      font-size: 32px;
+    }
   }
+
   .nav-item a::after{
     background-color:$color-text-dark;
   }
@@ -117,7 +156,10 @@
     }
 
     @include tablet{
-      display: none;
+      line-height: 150%;
+      font-size: 32px;
+      align-items: center;
+      padding-bottom: 20px;
     }
 }
 
@@ -125,4 +167,10 @@
 
 .header-menu__link svg{
   margin-left: 8px;
+
+  @include tablet{
+  width: 40px;
+  height: 40px;
+  margin-left: 17px;
+  }
 }
