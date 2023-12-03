@@ -34,7 +34,7 @@ opacity: 0;
 .enjoy-btn:hover svg {
     opacity: 1;
 }
-// ---------circle buttons------------------------
+// ---------circle buttons-----------------------------------------------------------------
 
 .circle-btn{
     border-radius: 100px;
@@ -44,7 +44,7 @@ opacity: 0;
     transition: background-color 0.3s;
 }
 
-// -----slider butttons arrows-----
+// -----slider butttons arrows-------------------------------------------------------------
 .slider__btn-right{
     margin-right: 5px
 }
@@ -137,7 +137,7 @@ color:$color-text-dark;
     margin-left: 13px;
     margin-top: 11px;
 }
-// ----------media BTN--------
+// ----------media BTN---------------------------------------------------------------------------
 .media-buttons{
     display: flex;
     justify-content: start;
@@ -162,7 +162,7 @@ color:$color-text-dark;
     stroke: $color-border-light;
 }
 
-// --------------------menu btns------------------
+// --------------------menu btns---------------------------------------------------------------------
 .category__btns{
     display: flex;
     justify-content: center;
@@ -181,15 +181,18 @@ color:$color-text-dark;
     color: $color-text-dark;
     gap:8px;
     font-style: normal;
-font-weight: 600;
-line-height: 150%;
-padding: 8px 16px 8px 8px;
+    line-height: 150%;
+    font-weight: 600;
+    padding: 8px 16px 8px 8px;
+    
+    @include menu-btn__hover;
 
 @include mobile{
     padding: 10px 16px 8px 8px;
     gap: 0;
 }
 
+    
 }
 .category__btns button svg{
     margin-right: 4px;
@@ -202,7 +205,7 @@ padding: 8px 16px 8px 8px;
 .category__btns button.active {
     background-color: $color-hover-btn;
     color:$color-text-light;
-    
+
     svg{
         fill: transparent;
     }
@@ -222,3 +225,5 @@ padding: 8px 16px 8px 8px;
         }
     }
 }
+
+// -----------------------popup-btn----------------------------------------------------------------------

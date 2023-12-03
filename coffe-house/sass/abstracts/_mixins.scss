@@ -19,6 +19,17 @@
     }
   }
 
+  @mixin menu-btn__hover() {
+    &:hover{
+      background-color: $color-hover-btn;
+      color:$color-text-light;
+
+      svg{
+          fill: transparent;
+      }
+
+    }
+  }
   @mixin tablet {
 
     @media (max-width: $tablet-width) { @content; }
