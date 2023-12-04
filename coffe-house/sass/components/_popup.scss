@@ -1,7 +1,77 @@
 .popup{
-    position: fixed;
+    position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
-    background-color: $color-text-dark;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    background-color: #403f3d9a;
+    visibility: hidden;
+    transition: 0.1s ease;
+}
+.popup-active{
+    transform: translate(-50%, -50%) scale(1);
+    visibility: visible;
+    top: 50%;
+}
+.popup_body{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.popup-content{
+    background-color: $color-text-light;
+    display: flex;
+    width: 800px;
+    border-radius: 40px;
+    padding-right: 17px;
+}
+.popup-descr{
+    display: flex;
+    flex-direction:column;
+}
+.popup-content img{
+    border-radius: 40px;
+    margin: 16px 20px 168px 16px;
+    object-fit: cover;
+}
+.popup-descr h3{
+    margin-top: 15px;
+    margin-bottom: 12px
+}
+.item-descr{
+    line-height: 150%;
+}
+.item-size{
+    margin-top: 24px;
+}
+.item-additives{
+    margin-top: 24px;
+}
+
+.popup__total-price{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 17px;
+
+}
+.popup__total-price span{
+    font-size: 24px;
+font-weight: 600;
+line-height: 125%;
+color: $color-text-dark;
+
+}
+.popup__add-info{
+    font-size: 1rem;
+
+}
+.add-info__block{
+    border-top: 1px solid grey;
+    margin-top: 19px;
+    padding-top: 6px;
+    margin-bottom: 26px;
 }

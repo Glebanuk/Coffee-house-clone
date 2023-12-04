@@ -227,3 +227,70 @@ color:$color-text-dark;
 }
 
 // -----------------------popup-btn----------------------------------------------------------------------
+
+.popup__size-btn{
+    margin-top: 8px;
+}
+.popup-btn{
+    display: inline-flex;
+    align-items:center;
+    border-radius: 100px;
+    background-color: transparent;
+    border: 1px solid $color-border-light;
+    color: $color-text-dark;
+    font-weight: 600;
+    padding: 8px 16px 8px 8px;
+
+    &:hover{
+        background-color: $color-hover-btn;
+        color: $color-text-light;
+    }
+}
+
+.popup-btn:hover span {
+    background: $color-text-light;
+    color: $color-hover-btn;
+}
+
+.popup__size-btn span,
+.popup__add-btn span{
+    display: inline-flex;
+    justify-content: center;
+    align-items:center;
+    border-radius: 100px;
+    width: 30px;
+    height: 30px;
+    background-color: $color-border-light;
+    color: $color-text-dark;
+    font-weight: 600;
+    margin-right: 8px;
+}
+
+.popup-descr .popup-btn__active{
+    background: $color-hover-btn;
+    color: $color-border-light;
+
+     span{
+        background: $color-text-light;
+     }
+}
+
+.popup__add-btn{
+    margin-top: 8px;
+}
+
+.popup__close-btn{
+    border-radius: 100px;
+    border: 1px solid grey;
+    padding: 10px;
+    background-color: transparent;
+    
+    &:hover{
+        background-color: $color-hover-btn;
+        color: $color-border-light;
+    }
+
+}
+
+
+
