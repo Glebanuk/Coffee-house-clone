@@ -101,6 +101,7 @@ h3 {
   border: 1px solid #665F55;
   background: transparent;
   padding: 15px;
+  width: 60px;
   transition: background-color 0.3s;
 }
 
@@ -900,9 +901,9 @@ h3 {
 }
 
 .enjoy-wrapper {
+  position: relative;
   border-radius: 40px;
   padding: 100px;
-  background-image: url("../assets/home_img/img-hero.jpg");
 }
 @media (max-width: 768px) {
   .enjoy-wrapper {
@@ -921,6 +922,17 @@ h3 {
     padding-left: 16px;
     padding-bottom: 59px;
   }
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 40px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 
 .enjoy-content__container {
@@ -1115,6 +1127,7 @@ h3 {
   font-style: normal;
   color: #403F3D;
   position: relative;
+  cursor: auto;
 }
 .menu-page-link::after {
   content: "";

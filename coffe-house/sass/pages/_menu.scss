@@ -4,6 +4,7 @@
     font-style: normal;
     color: $color-text-dark;
     position: relative;
+    cursor: auto;
 
     &::after {
         content: "";
