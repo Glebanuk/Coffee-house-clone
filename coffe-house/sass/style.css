@@ -507,14 +507,19 @@ h3 {
   display: flex;
   justify-content: center;
   position: relative;
-  right: 0;
-  transition: 0.3s ease;
+  left: 0;
+  transition: 0.6s ease;
 }
 
 .slider-item {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media (max-width: 380px) {
+  .slider-item {
+    width: 350px;
+  }
 }
 
 .slider-item img {
@@ -569,16 +574,55 @@ h3 {
 }
 
 .slider-indicator {
+  -webkit-appearance: none;
+  position: relative;
   display: block;
   width: 40px;
   height: 4px;
   background-color: #C1B6AD;
 }
 
-.slider-indicator.active {
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+.slider-indicator::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 0;
   background-color: #665F55;
 }
 
+.slider-indicator.active::before {
+  width: 100%;
+  animation: fillWidth 5s linear;
+}
+
+.slider-indicator:not(.active)::before {
+  animation: fillWidthReversed 1s linear;
+}
+
+.slider-indicator.paused::before {
+  animation-play-state: paused;
+}
+
+@keyframes fillWidth {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes fillWidthReversed {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
 .popup {
   position: absolute;
   width: 100%;

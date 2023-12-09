@@ -52,7 +52,7 @@ opacity: 0;
 .slider__btn-left{
     margin-left: 5px
 }
-.slider__btn{
+.slider__btn {
     &:hover {
         background-color: $color-hover-btn; 
 
@@ -60,9 +60,14 @@ opacity: 0;
             stroke: $color-text-light; 
         }
     }
+@include tablet{
 
-    @include mobile{
+}
+    @include mobile {
         display: none;
+
+       
+        
     }
 }
 // -----dawnload btn-----
