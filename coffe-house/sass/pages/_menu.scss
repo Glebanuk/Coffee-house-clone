@@ -4,6 +4,7 @@
     font-style: normal;
     color: $color-text-dark;
     position: relative;
+    cursor: auto;
 
     &::after {
         content: "";
@@ -58,16 +59,31 @@
         row-gap: 41px;
     }
 }
+
+.tea-list{
+    display: none;
+}
+.desserts-list{
+    display: none;
+}
+
+
 .menu-items__list li:nth-child(5),
 .menu-items__list li:nth-child(6),
 .menu-items__list li:nth-child(7),
 .menu-items__list li:nth-child(8){
     @include tablet{
-        display: none;
+        position: absolute;
+        top: -100%;
+        // display: none;
     }
-    
-
 }
+.hidden-menu-cards{
+position: absolute;
+top: -100%;
+}
+
+
 .menu-items__list li{
     max-width: 310px;
     outline: solid 1px $color-text-dark;
