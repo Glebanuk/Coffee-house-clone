@@ -156,10 +156,95 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+// ------------------------------Categories of products-------------------------------------------------------
+
+//-----------btns behavior--------------------------\\
+
+const btnCoffeMenu = document.querySelector(".coffe-btn");
+const btnTeaMenu = document.querySelector(".tea-btn");
+const btnDessertsMenu = document.querySelector(".desert-btn");
+const btnLoadMore = document.querySelector(".menu__refresh-btn");
+
+const cofeeList = document.querySelector(".coffee-list");
+const teaList = document.querySelector(".tea-list");
+const dessertsList = document.querySelector(".desserts-list");
+
+const itemsMenu = document.querySelectorAll(".menu-items__list li");
+const itemsCoffee = document.querySelectorAll(".coffee-list li");
+const itemsTea = document.querySelectorAll(".tea-list li");
+const itemsDesserts = document.querySelectorAll(".desserts-list li");
+let maxVisible = 4;
 
 
+//  hide extra items on mob dev
+function applyStylesToMenuItems(items, maxVisible) {
+  if (window.innerWidth < 769) {
+    items.forEach((item, index) => {
+      if (index < maxVisible) {
+        item.style.position = 'static';
+      } else {
+        item.style.position = 'absolute';
+      }
+    });
+  }
+}
+
+// switch category and display More btn
+
+function toggleActiveCategory(btn, list, items, ) {
+  btn.addEventListener("click", () => {
+    [btnCoffeMenu, btnTeaMenu, btnDessertsMenu].forEach(menuBtn => {
+      menuBtn.classList.remove('active');
+    });
+
+    
+    btn.classList.add('active');
+
+    [cofeeList, teaList, dessertsList].forEach(menuList => {
+      menuList.style.display = 'none';
+    });
+
+    
+    list.style.display = 'flex';
+    // visible items in menu
+
+    if (window.innerWidth < 768){
+    btnLoadMore.style.display = "inline-block";
+  }
+
+    applyStylesToMenuItems(items, maxVisible);
+
+  });
+
+}
+
+toggleActiveCategory(btnCoffeMenu, cofeeList,itemsCoffee,  );
+toggleActiveCategory(btnTeaMenu, teaList, itemsTea, );
+toggleActiveCategory(btnDessertsMenu, dessertsList, itemsDesserts, );
 
 
+//---------------refresh btn-----------------
+
+btnLoadMore.addEventListener("click", () =>{
+  itemsMenu.forEach((item) =>{
+    item.style.position = "static";
+  })
+  btnLoadMore.style.display = "none";
+
+})
+
+
+// ------------------------------Popup window-------------------------------------------------------
+const popup = document.querySelector(".popup");
+
+itemsMenu.forEach((item) => {
+  item.addEventListener('click', () =>{
+    popup.classList.add("popup-active");
+
+    document.body.style.overflow = popup.classList.contains("popup-active") ? "hidden" : "auto";
+
+  })
+})
 
 
 

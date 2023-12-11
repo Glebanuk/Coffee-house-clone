@@ -59,10 +59,15 @@
         row-gap: 41px;
     }
 }
-.tea-list,
+
+.tea-list{
+    display: none;
+}
 .desserts-list{
     display: none;
 }
+
+
 .menu-items__list li:nth-child(5),
 .menu-items__list li:nth-child(6),
 .menu-items__list li:nth-child(7),
@@ -70,6 +75,7 @@
     @include tablet{
         position: absolute;
         top: -100%;
+        // display: none;
     }
 }
 .hidden-menu-cards{

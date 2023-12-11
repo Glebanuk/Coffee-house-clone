@@ -1233,7 +1233,10 @@ input[type=range]::-webkit-slider-thumb {
   }
 }
 
-.tea-list,
+.tea-list {
+  display: none;
+}
+
 .desserts-list {
   display: none;
 }

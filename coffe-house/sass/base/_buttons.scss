@@ -70,7 +70,7 @@ opacity: 0;
         
     }
 }
-// -----dawnload btn-----
+// -----dawnload btn--------------------------------------------------
 .download-btn__container{
     @include mobile {
         display: inline-flex;
@@ -95,12 +95,14 @@ opacity: 0;
         }
         
         .btn-text span{
-        color:$color-text-light
+        color:$color-text-light;
         }
 
-
+        
     }
 }
+
+
 
 .btn-text__container{
     display: inline-block;
