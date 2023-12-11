@@ -34,24 +34,25 @@ opacity: 0;
 .enjoy-btn:hover svg {
     opacity: 1;
 }
-// ---------circle buttons------------------------
+// ---------circle buttons-----------------------------------------------------------------
 
 .circle-btn{
     border-radius: 100px;
     border: 1px solid $color-hover-btn;
     background:transparent;
     padding: 15px;
+    width: 60px;
     transition: background-color 0.3s;
 }
 
-// -----slider butttons arrows-----
+// -----slider butttons arrows-------------------------------------------------------------
 .slider__btn-right{
     margin-right: 5px
 }
 .slider__btn-left{
     margin-left: 5px
 }
-.slider__btn{
+.slider__btn {
     &:hover {
         background-color: $color-hover-btn; 
 
@@ -59,12 +60,17 @@ opacity: 0;
             stroke: $color-text-light; 
         }
     }
+@include tablet{
 
-    @include mobile{
+}
+    @include mobile {
         display: none;
+
+       
+        
     }
 }
-// -----dawnload btn-----
+// -----dawnload btn--------------------------------------------------
 .download-btn__container{
     @include mobile {
         display: inline-flex;
@@ -89,12 +95,14 @@ opacity: 0;
         }
         
         .btn-text span{
-        color:$color-text-light
+        color:$color-text-light;
         }
 
-
+        
     }
 }
+
+
 
 .btn-text__container{
     display: inline-block;
@@ -137,7 +145,7 @@ color:$color-text-dark;
     margin-left: 13px;
     margin-top: 11px;
 }
-// ----------media BTN--------
+// ----------media BTN---------------------------------------------------------------------------
 .media-buttons{
     display: flex;
     justify-content: start;
@@ -162,7 +170,7 @@ color:$color-text-dark;
     stroke: $color-border-light;
 }
 
-// --------------------menu btns------------------
+// --------------------menu btns---------------------------------------------------------------------
 .category__btns{
     display: flex;
     justify-content: center;
@@ -181,15 +189,18 @@ color:$color-text-dark;
     color: $color-text-dark;
     gap:8px;
     font-style: normal;
-font-weight: 600;
-line-height: 150%;
-padding: 8px 16px 8px 8px;
+    line-height: 150%;
+    font-weight: 600;
+    padding: 8px 16px 8px 8px;
+    
+    @include menu-btn__hover;
 
 @include mobile{
     padding: 10px 16px 8px 8px;
     gap: 0;
 }
 
+    
 }
 .category__btns button svg{
     margin-right: 4px;
@@ -202,7 +213,7 @@ padding: 8px 16px 8px 8px;
 .category__btns button.active {
     background-color: $color-hover-btn;
     color:$color-text-light;
-    
+
     svg{
         fill: transparent;
     }
@@ -222,3 +233,72 @@ padding: 8px 16px 8px 8px;
         }
     }
 }
+
+// -----------------------popup-btn----------------------------------------------------------------------
+
+.popup__size-btn{
+    margin-top: 8px;
+}
+.popup-btn{
+    display: inline-flex;
+    align-items:center;
+    border-radius: 100px;
+    background-color: transparent;
+    border: 1px solid $color-border-light;
+    color: $color-text-dark;
+    font-weight: 600;
+    padding: 8px 16px 8px 8px;
+
+    &:hover{
+        background-color: $color-hover-btn;
+        color: $color-text-light;
+    }
+}
+
+.popup-btn:hover span {
+    background: $color-text-light;
+    color: $color-hover-btn;
+}
+
+.popup__size-btn span,
+.popup__add-btn span{
+    display: inline-flex;
+    justify-content: center;
+    align-items:center;
+    border-radius: 100px;
+    width: 30px;
+    height: 30px;
+    background-color: $color-border-light;
+    color: $color-text-dark;
+    font-weight: 600;
+    margin-right: 8px;
+}
+
+.popup-descr .popup-btn__active{
+    background: $color-hover-btn;
+    color: $color-border-light;
+
+     span{
+        background: $color-text-light;
+     }
+}
+
+.popup__add-btn{
+    margin-top: 8px;
+}
+
+.popup__close-btn{
+    border-radius: 100px;
+    border: 1px solid grey;
+    padding: 10px;
+    background-color: transparent;
+    
+    &:hover{
+        background-color: $color-hover-btn;
+        color: $color-border-light;
+    }
+
+}
+
+
+
