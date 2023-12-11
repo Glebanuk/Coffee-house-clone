@@ -169,7 +169,7 @@ const cofeeList = document.querySelector(".coffee-list");
 const teaList = document.querySelector(".tea-list");
 const dessertsList = document.querySelector(".desserts-list");
 
-const itemsMenu = document.querySelectorAll(".menu-items__list li");
+
 const itemsCoffee = document.querySelectorAll(".coffee-list li");
 const itemsTea = document.querySelectorAll(".tea-list li");
 const itemsDesserts = document.querySelectorAll(".desserts-list li");
@@ -236,14 +236,31 @@ btnLoadMore.addEventListener("click", () =>{
 
 // ------------------------------Popup window-------------------------------------------------------
 const popup = document.querySelector(".popup");
+const btnPopupClose = document.querySelector(".popup__close-btn");
+const itemsMenu = document.querySelectorAll(".menu-items__list li");
+
+
 
 itemsMenu.forEach((item) => {
-  item.addEventListener('click', () =>{
-    popup.classList.add("popup-active");
-
-    document.body.style.overflow = popup.classList.contains("popup-active") ? "hidden" : "auto";
-
+  item.addEventListener('click', (event) =>{
+    // event.stopPropagation();
+    openPopup()
   })
+})
+
+function openPopup() {
+  popup.classList.add("popup-active");
+  document.body.style.overflow = "hidden";
+}
+
+
+function closePopup(){
+  popup.classList.remove("popup-active");
+  document.body.style.overflow = "auto";
+}
+
+btnPopupClose.addEventListener("click", () =>{
+  closePopup()
 })
 
 
